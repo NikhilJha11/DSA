@@ -1,0 +1,21 @@
+
+
+/*Complete the Function below*/
+class GfG
+{
+	public static int palinArray(int[] a, int n)
+           {
+               
+               for(int num:a){
+                   String number=String.valueOf(num);
+                   int i=0;
+                   int j=number.length()-1;
+                   while(i<=j){
+                       if(number.charAt(i)!=number.charAt(j))
+                       return 0;
+                       i++;j--;
+                   }
+               }
+               return 1;
+           }
+}
