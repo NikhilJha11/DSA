@@ -1,0 +1,26 @@
+class Solution {
+    // Binary search method
+    int bin_search(int arr[], int left, int right, int k) {
+        // If left is greater than right, target is not found
+        if (left > right) return -1;
+        
+        // Calculate the middle index
+        int mid = (left + right) / 2;
+        
+        // If target is found, return the index
+        if (arr[mid] == k) return mid;
+        
+        // If target is smaller than the middle element, continue searching in the left half
+        if (arr[mid] > k)
+            return bin_search(arr, left, mid - 1, k);
+        
+        // If target is greater than the middle element, continue searching in the right half
+        else
+            return bin_search(arr, mid + 1, right, k);
+    }
+    
+    // Wrapper function for binary search method
+    int binarysearch(int arr[], int n, int k) {
+        return bin_search(arr, 0, n - 1, k);
+    }
+}
