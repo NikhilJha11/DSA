@@ -1,0 +1,13 @@
+class Compute {
+    // Function to find the largest number in the array
+    public int largest(int arr[], int n) {
+        // Initialize the maximum number as the first element of the array
+        int max=arr[0];
+        // Traverse through the array starting from the second element
+        for(int i=1;i<n;i++)
+            // Update the maximum number if a larger element is found
+            max=Math.max(max,arr[i]);
+        // Return the maximum number in the array
+        return max;
+    }
+}
