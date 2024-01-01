@@ -1,0 +1,16 @@
+class Compute 
+{
+    static Pair getMinMax(long a[], long n)  
+    {
+        //Write your code here
+        long max = Long.MIN_VALUE;
+        long min = Long.MAX_VALUE;
+        for(int i = 0 ; i < n ; i++){
+            if(max < a[i]){
+                max = a[i];
+            }
+            if(min>a[i]) min = a[i];
+        }
+        return new Pair(min,max);
+    }
+}
